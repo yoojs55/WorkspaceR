@@ -51,23 +51,52 @@ df <- read.table( file = 'airquality.txt,', header = T )
 # Java(TM) SE Runtime Environment (build 1.8.0_251-b08)
 # Java HotSpot(TM) 64-Bit Server VM (build 25.251-b08, mixed mode)
     
-# Excel 파일 읽기
+
+
+######### Excel 파일 읽기
 #
 # Excel 파일 읽기용 패키지
+# 최초 한번만 설치
 install.packages( "xlsx" )     # Excel 파일 읽기 패키지 ( "xlsx" 처럼 큰따옴표만 사용해야 한다. )
 install.packages( "rJava" )    # Java 실행 패키지
 # 위 과정을 진행하여도 설치만 끝났을 뿐, 사용할 준비는 안되어 있는 상태임
 
 # 기본 패키지 외에 설치된 패키지 실행
-library( rJava )
+# 사용하기전 library 함수로 불러와야 한다.(= library load)
+# 왠만하면 library 함수를 스크립트에서 작성하여 불러와라(내역관리)
+library( rJava ) # library( rJava )을 먼저 실행 후 library( xlsx ) 실행해야 한다.(Excel 구축 언어가 Java이기 때문이다.)
 library( xlsx )
 
-df.xlsx <- read.xlsx( file = "airquality.xlsx",
+setwd( "D:\\R_work\\4day_2020.05.15")             # 불러올 파일 저장 경로 설정
+df.xlsx <- read.xlsx( file = "airquality.xlsx", 
                       sheetIndex = 1,
                       encoding = "UTF-8")
+
 df.xlsx
+class( df.xlsx )
+str( df.xlsx )
+head( df.xlsx )
+tail( df.xlsx )
 
+score <- c( 76, 84, 69, 50, 95, 6, 85, 71, 88, 84 )
+which( score == 69 )
+which( score >= 85 )
+max( score )
+which.max( score )
+min( score )
+which.min( score >= 60 )
 
+idx <- which( score >= 60 )
+score[ idx ] <- 61
+score
+
+idx <- which( score >= 60 )
+score[ idx ] <- 61
+score
+
+idx <- which( df.xlsx[ , 1:2 ] == "NA", arr.ind = TRUE )
+idx
+# arr.ind = TRUE : 해당 조건의 행/열 값을 확일 할때
 
 
 
