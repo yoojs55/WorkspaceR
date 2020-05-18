@@ -340,8 +340,12 @@ is.data.frame( iris.m )
 # 
 # csv file 내용 읽어서 data frame 생성
 #
+setwd( "D:\\R_work\\4day_2020.05.15")
 air <- read.csv( 'airquality.csv', header = T )    # header = T 면, 제목줄을 데이터로 활용하지 않는다.
+air
+
 air2 <- read.csv( 'airquality.csv', header = F )   # header = F 면, 제목줄을 데이터로 활용한다.
+air2
 
 # 파일을 읽지 못하는 경우, air <- read.csv( D:\\R_work\\airquality.csv, header = T ) 경로를 직접 지정해준다.
 

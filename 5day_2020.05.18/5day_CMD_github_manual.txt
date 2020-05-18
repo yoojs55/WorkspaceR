@@ -1,0 +1,31 @@
+D:\R_work>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   2day.R
+        deleted:    YOOJONGSUN_20200513.R
+        deleted:    YOOJONGSUN_20200513_add_question.R
+        deleted:    YOOJONGSUN_20200513_answer.R
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .RData
+        .Rhistory
+        "1\354\235\274\354\260\250_2020.05.12/"
+        2020.05.16_youtube.R
+        "2\354\235\274\354\260\250_2020.05.13/"
+        "3\354\235\274\354\260\250_2020.05.14/"
+        "4\354\235\274\354\260\250_2020.05.15/"
+        "5\354\235\274\354\260\250_2020.05.18/"
+        R_function_arr.xlsx
+        airquality.csv
+        font/
+        ~$R_function_arr.xlsx
+        "\355\203\220\354\203\211\354\240\201 \353\215\260\354\235\264\355\204\260 \353\266\204\354\204\235(EDA) & \355\206\265\352\263\204 \352\270\260\354\264\210 \354\236\220\353\243\214/"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\R_work>git remote add origin https://github.com/yoojs55/WorkspaceR.git
+
+D:\R_work>
