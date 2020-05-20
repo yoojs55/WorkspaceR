@@ -82,12 +82,12 @@ head( df.xlsx )
 tail( df.xlsx )
 
 score <- c( 76, 84, 69, 50, 95, 6, 85, 71, 88, 84 )
-which( score == 69 )
+which( score == 69 )     # which( ) : 벡터의 index 위치, 즉 자리 번호를 결과값으로 출력
 which( score >= 85 )
 max( score )
-which.max( score )
+which.max( score )       # which.max( ) : ()에 입력된 조건에 의해 최대값의 index 번호값을 결과로 출력
 min( score )
-which.min( score >= 60 )
+which.min( score >= 60 ) # which.min ( ) : ()에 입력된 조건에 의해 최소값의 index 번호값을 결과로 출력
 
 idx <- which( score >= 60 )
 score[ idx ] <- 61

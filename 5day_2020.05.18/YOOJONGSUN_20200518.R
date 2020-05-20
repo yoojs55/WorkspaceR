@@ -67,11 +67,15 @@ median( score )
 sd( score )
 
 # 5. 가장 성적이 높은 과목의 이름을 출력하시오.
-df_sc <- data.frame( score )                               # 방법 1
+names( score[ score == max(score) ] )                      # 방법 1
+
+which( score == max( score ) )                             # 방법 2
+
+df_sc <- data.frame( score )                               # (틀린 방법)
 df_sc
 rownames( subset( df_sc, score == max( df_sc$score ) ) )
 
-max.score <- max( df_sc$score )                            # 방법 2
+max.score <- max( df_sc$score )                            # (틀린 방법)
 rownames( subset( df_sc, score == max.score ) )
 
 # 6. 성적에 대한 상자그림을 작성하고, 이상치에 해당하는 과목이 있으면 출력하시오.
@@ -81,7 +85,7 @@ boxplot.stats( score )$out
 # 7. 다음 조건을 만족하는 위 성적에 대한 히스토그램을 작성하시오.
 #    (그래프 제목: 학생 성적, 막대의 색: 보라색)
 hist( score, main = '학생 성적',
-      xlab = 'subject', ylab = 'score',
+      xlab = 'score', ylab = 'freq',
       col = 'purple' )
 
 # 문4)
