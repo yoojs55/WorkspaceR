@@ -40,6 +40,15 @@ st <- data.frame(state.x77)
 
 #  (1) st의 각 변수(열)들에 대해 특이값이 존재하는지 상자그림을 그려 확인하시오.
 boxplot( st )
+boxplot( st[ , 1 ] )
+boxplot( st[ , 2 ] )
+boxplot( st[ , 3 ] )
+boxplot( st[ , 4 ] )
+boxplot( st[ , 5 ] )
+boxplot( st[ , 6 ] )
+boxplot( st[ , 7 ] )
+boxplot( st[ , 8 ] )
+
 boxplot.stats( st$Population )$out
 boxplot.stats( st$Income )$out
 boxplot.stats( st$Illiteracy )$out
@@ -165,4 +174,4 @@ merge( authors, books, by.x = c( 'surname' ), by.y = c( 'name'), all.x = T )
 merge( authors, books, by.x = c( 'surname' ), by.y = c( 'name'), all.y = T )
 
 # (4) surname과 other.author를 공통 열로 하여 authors와 books를 병합하여 출력하시오.
-merge( authors, books, by.x = c( 'surname' ), by.y = c( 'name'), all = T )
+merge( authors, books, by.x = c( 'surname' ), by.y = c( 'other.author')  )
